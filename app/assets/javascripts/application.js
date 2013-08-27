@@ -1,5 +1,12 @@
 // Some general UI pack related JS
 // Extend JS String with repeat method
+//= require jquery
+//= require jquery_ujs
+//=require twitter/bootstarp
+//= require flatuipro
+//= require_tree .
+//= require jquery.ui.all
+
 String.prototype.repeat = function(num) {
   return new Array(num + 1).join(this);
 };
