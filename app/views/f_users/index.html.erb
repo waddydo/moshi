@@ -1,0 +1,34 @@
+<h1>Listing f_users</h1>
+
+<table>
+  <tr>
+    <th>Photo</th>
+    <th>Name</th>
+    <th>Education</th>
+    <th>Hobbies</th>
+    <th>Birthday</th>
+    <th>Rela status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @f_users.each do |f_user| %>
+  <tr>
+	<td><%= image_tag f_user.avatar.url %></td>
+    <td><%= f_user.name %></td>
+    <td><%= f_user.education %></td>
+    <td><%= f_user.hobbies %></td>
+    <td><%= f_user.birthday %></td>
+    <td><%= f_user.rela_status %></td>
+    <td><%= link_to 'Show', f_user %></td>
+    <td><%= link_to 'Edit', edit_f_user_path(f_user) %></td>
+    <td><%= link_to 'Destroy', f_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td><%= link_to 'post status', new_status_path(:uid => f_user.id) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_f_user_path %>

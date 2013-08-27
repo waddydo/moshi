@@ -1,0 +1,25 @@
+<h1>Listing user_scs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_scs.each do |user_sc| %>
+  <tr>
+    <td><%= user_sc.name %></td>
+    <td><%= user_sc.date %></td>
+    <td><%= link_to 'Show', user_sc %></td>
+    <td><%= link_to 'Edit', edit_user_sc_path(user_sc) %></td>
+    <td><%= link_to 'Destroy', user_sc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User sc', new_user_sc_path %>

@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Photo</th>
+    <th>Name</th>
+    <th>Hobby</th>
+  </tr>
+
+  
+<% @users.each do |user| %>
+  <tr>
+    <td><%= image_tag user.avatar.url(:thumb) %></td>
+    <td><%=h user.name %></td>
+    <td><%=h user.hobby %></td>
+    <td><%= link_to 'Show', user %></td>
+  </tr>
+<% end %>
+</table>

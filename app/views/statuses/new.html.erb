@@ -1,0 +1,20 @@
+Post messages
+<hr>
+<%= link_to 'home', f_users_path %><br />
+
+<%= form_for @post_msg do |f| -%>
+  Message: <%= f.text_field :message %> <br />
+  <%= hidden_field_tag 'uid', @uid  %>
+  <%= f.submit 'Post'%> <br />
+<% end -%>
+
+<hr>
+Display all messages <br />
+<% if !@statuses.blank? %>
+  <% for item in @statuses %>
+   <%= item.message %> <br />
+   <%= item.created_at %> <br />
+  <% end %>
+   
+<% else %>
+<% end %>

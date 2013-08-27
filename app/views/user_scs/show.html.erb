@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user_sc.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @user_sc.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_sc_path(@user_sc) %> |
+<%= link_to 'Back', user_scs_path %>
