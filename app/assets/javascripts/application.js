@@ -2,7 +2,7 @@
 // Extend JS String with repeat method
 //= require jquery
 //= require jquery_ujs
-//=require twitter/bootstarp
+//=require twitter/bootstrap
 //= require flatuipro
 //= require_tree .
 //= require jquery.ui.all
