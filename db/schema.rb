@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(:version => 20130826153658) do
     t.string   "message"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer "user_id"
   end
 
   create_table "statuses", :force => true do |t|
